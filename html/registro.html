@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/registro.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+
+<body>
+    <section>
+
+        <img class="escudo" src="../images/escudo.png" alt="escudo">
+
+        <form id="form1" class="registro" action="" name="registro" method="post" onsubmit="return validar();">
+
+
+            <h1 class="registro__titulo">DEHESA FC</h1>
+            <h2 class="registro__titulo">Registrarse</h2>
+
+            <input id="nombre" class="registro__input" type="text" name="nombre" maxlength="30" required>
+            <label for="" class="registro__label">Nombre</label>
+
+            <input id="apellidos" class="registro__input" type="text" name="Apellidos" maxlength="60" required>
+            <label for="" class="registro__label">Apellidos</label>
+
+            <input id="correo" class="registro__input" type="email" name="correo" maxlength="100" required>
+            <label for="" class="registro__label">Correo</label>
+
+            <input id="telefono" class="registro__input" type="number" name="telefono" required>
+            <label for="" class="registro__label">Telefono</label>
+
+            <input id="dni" class="registro__input" type="text" name="dni" maxlength="9" required>
+            <label for="" class="registro__label">DNI</label>
+
+            <input id="iban" class="registro__input" type="text" name="iban" maxlength="24" onchange="generarSWIFT()"
+                required>
+            <label for="" class="registro__label">IBAN</label>
+
+            <input id="swift" class="registro__input" type="text" name="swift" maxlength="11" required>
+            <label for="" class="registro__label">SWIFT</label>
+
+            <input id="nombre_usuario" class="registro__input" type="text" name="nombre_usuario" maxlength="20"
+                required>
+            <label for="" class="registro__label">Nombre Usuario</label>
+
+            <input id="contraseña" class="registro__input" type="password" name="contraseña" maxlength="20" required>
+            <label for="" class="registro__label">Contraseña</label>
+
+            <input id="fecha_nacimiento" class="registro__input" type="date" name="fecha_nacimiento" maxlength="10"
+                required>
+            <label for="" class="registro__label">Fecha Nacimiento</label>
+
+            <p><b>TIPO:</b>
+                <input type="radio" name="tipo" value="cliente"> <b>Cliente</b>
+                <input type="radio" name="tipo" value="trabajador"> <b>Trabajador</b>
+            </p>
+            <p>
+                <input type="checkbox" name="terminos" id="terminos"> <b>Terminos y condiciones</b>
+            </p>
+            <a onclick="ocultarLogin()" href="../index.html">Ya tienes cuenta?</a>
+            <p>
+                <input class="registro__submit" type="submit" onclick="abrirNuevaVentana()" value="Enviar">
+                <br>
+                <input class="registro__vaciar" type="reset" value="Borrar">
+            </p>
+        </form>
+
+        <img class="jugador" src="../images/jugador.png" alt="jugador">
+    </section>
+
+    <footer>
+
+        <div class="container_footer_all">
+
+            <div class="footer_body">
+
+                <div class="columna1">
+
+                    <h1>Más información</h1>
+
+                    <p>
+                        Página Web oficial de DEHESA FC
+                    </p>
+
+                </div>
+
+                <div class="columna2">
+
+                    <h1>Redes Sociales</h1>
+
+                    <div class="row">
+
+                        <img src="images/instagram.png" alt="emoticono">
+                        <label>Siguenos en Instagram</label>
+
+                    </div>
+
+                    <div class="row">
+
+                        <img src="images/twitter.png" alt="emoticono">
+                        <label>Siguenos en Twitter</label>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="columna3">
+
+                    <h1>Informacion Contactos</h1>
+
+                    <div class="row2">
+
+                        <img src="images/casa.png" alt="casa">
+                        <label>Coria del Rio(Sevilla),
+                            Calle Chamarin nº50.
+                        </label>
+
+                    </div>
+
+
+                    <div class="row2">
+
+                        <img src="images/telefono.jpg" alt="telefono">
+                        <label>+34 654 616 788
+                        </label>
+
+                    </div>
+
+                    <div class="row2">
+
+                        <img src="images/correo.jpg" alt="correo">
+                        <label>pabloguisasola.21@campuscamara.es
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="container_footer">
+            <div class="politica_footer">
+
+                <div class="copy_right">
+                    ©️ 2022 Todos los Derechos Reservados
+                </div>
+
+                <div class="politica">
+                    <a href=""> Informacion Compañia</a> | <a href="">Privacion y politica</a> | <a href="">Terminos y
+                        condiciones</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="../js/javascript.js"></script>
+</body>
+
+</html>

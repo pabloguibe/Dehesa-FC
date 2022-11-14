@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <section>
+
+        <img class="escudo" src="images/escudo.png" alt="escudo">
+
+        <form id="form1" class="login" action="#" name="login" method="post" onsubmit="return validar();">
+
+
+            <h1 class="login__titulo">DEHESA FC</h1>
+            <h2 class="login__titulo">Login</h2>
+
+            <input id="nombre_usuario" class="login__input" type="text" name="nombre_usuario" maxlength="20"
+                required>
+            <label for="" class="login__label">Nombre Usuario</label>
+
+            <input id="contraseña" class="login__input" type="password" name="contraseña" maxlength="20" required>
+            <label for="" class="login__label">Contraseña</label>
+
+            <p>
+                <a href="html/registro.html">No tienes cuenta?</a>
+            </p>
+            <input class="login__submit" type="submit" onclick="abrirNuevaVentana()" value="Enviar">
+            <br>
+            <input class="login__vaciar" type="reset" value="Borrar">
+            </p>
+        </form>
+
+        <img class="jugador" src="images/jugador.png" alt="jugador">
+    </section>
+
+
+    <footer>
+
+        <div class="container_footer_all">
+
+            <div class="footer_body">
+
+                <div class="columna1">
+
+                    <h1>Más información</h1>
+
+                    <p>
+                        Página Web oficial de DEHESA FC
+                    </p>
+
+                </div>
+
+                <div class="columna2">
+
+                    <h1>Redes Sociales</h1>
+
+                    <div class="row">
+
+                        <img src="images/instagram.png" alt="emoticono">
+                        <label>Siguenos en Instagram</label>
+
+                    </div>
+
+                    <div class="row">
+
+                        <img src="images/twitter.png" alt="emoticono">
+                        <label>Siguenos en Twitter</label>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="columna3">
+
+                    <h1>Informacion Contactos</h1>
+
+                    <div class="row2">
+
+                        <img src="images/casa.png" alt="casa">
+                        <label>Coria del Rio(Sevilla),
+                            Calle Chamarin nº50.
+                        </label>
+
+                    </div>
+
+
+                    <div class="row2">
+
+                        <img src="images/telefono.jpg" alt="telefono">
+                        <label>+34 654 616 788
+                        </label>
+
+                    </div>
+
+                    <div class="row2">
+
+                        <img src="images/correo.jpg" alt="correo">
+                        <label>pabloguisasola.21@campuscamara.es
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="container_footer">
+            <div class="politica_footer">
+
+                <div class="copy_right">
+                    ©️ 2022 Todos los Derechos Reservados
+                </div>
+
+                <div class="politica">
+                    <a href=""> Informacion Compañia</a> | <a href="">Privacion y politica</a> | <a href="">Terminos y
+                        condiciones</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/javascript.js"></script>
+</body>
+
+</html>
