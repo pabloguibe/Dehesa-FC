@@ -4,7 +4,15 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+
 }
+
+body{
+    background-image: url(../images/fondo_cliente_principal.jpg);
+    background-size: cover;
+}
+
+/* DISEÑO DEL NAV */
 
 nav {
     background: #F74946;
@@ -18,15 +26,17 @@ nav {
 }
 
 .escudo {
-    height: 130px;
-    margin-top: -45px;
-
+    height: 120px;
+    margin-top: -20px;
+    width: 70px;
+    height: 70px;
+    margin-left: 130px;
 }
 
 .titulo_escudo {
-    margin-top: -83px;
-    margin-left: 105px;
-    color: #fff
+    margin-top: -50px;
+    margin-left: 220px;
+    color: #fff;
 }
 
 nav ul {
@@ -118,7 +128,66 @@ section {
         color:#F74946;
     }
 
-    #check:checked 
-    https://www.youtube.com/watch?v=f7QujqArvIw (21:47)
+    #check:checked ~ ul {
+        left: 0;
+
+    } 
+    
 
 }
+
+
+
+/* DISEÑO PROXIMOS PARTIDOS */
+
+.bloque_partidos{
+    text-align: center;
+    background: white;
+    width: 60%;
+    margin: auto;
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 30px;
+    border: #F74946 solid;
+    opacity: 80%;
+   
+}
+
+.rivales1{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    
+}
+
+.rivales2{
+    display: flex;
+    margin: auto;
+    margin-top: -80px;
+    margin-left: 25%;
+}
+
+.rivales3{
+    display: flex;
+    margin: auto;
+    margin-top: -80px;
+    margin-left: 50%;
+}
+
+.rivales4{
+    display: flex;
+    margin: auto;
+    margin-top: -80px;
+    margin-left: 75%;
+}
+
+
+.rivales img{
+    margin: 0 0;
+}
+
+.vs{
+    margin-top: 25px;
+}
+
+
