@@ -33,6 +33,8 @@ nav {
     margin-left: 130px;
 }
 
+
+
 .titulo_escudo {
     margin-top: -50px;
     margin-left: 220px;
@@ -153,6 +155,14 @@ section {
    
 }
 
+.local{
+    margin-right: 10px;
+}
+.visitante{
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
 .rivales1{
     display: flex;
     margin: auto;
@@ -163,21 +173,21 @@ section {
 .rivales2{
     display: flex;
     margin: auto;
-    margin-top: -80px;
+    margin-top: -50px;
     margin-left: 25%;
 }
 
 .rivales3{
     display: flex;
     margin: auto;
-    margin-top: -80px;
+    margin-top: -50px;
     margin-left: 50%;
 }
 
 .rivales4{
     display: flex;
     margin: auto;
-    margin-top: -80px;
+    margin-top: -50px;
     margin-left: 75%;
 }
 
@@ -190,4 +200,106 @@ section {
     margin-top: 25px;
 }
 
+/* DISEÑO Noticias */
 
+.texto_noticias{
+    text-align: center;
+    color:black;
+    background: white;
+    width: 540px;
+    border-radius: 30px;
+    border: #F74946 solid;
+    opacity: 80%;
+    margin-top: 80px;
+    
+}
+.noticias{
+    float: left;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.once{
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.alineacion_once{
+    position: absolute;
+    top: 360px;
+    left: 50px;
+    color: #fff;
+}
+
+.camiseta{
+    margin-top: 20px;
+}
+
+.camiseta_imagen{
+    height: 200px;
+    width: 200px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.precio{
+    position: absolute;
+    top: 680px;
+    left: 70px;
+    color:#fff;
+}
+
+
+.abono{
+    margin-top: -200px;
+    margin-left: 270px;
+}
+
+.abono_img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+
+}
+
+.texto_abono{
+    position: absolute;
+    top: 680px;
+    left: 330px;
+    color:#fff;
+}
+
+.boton_carnet{
+    margin-top: 510px;
+    margin-left: -100px;
+}
+
+.boton_camiseta{
+    margin-top: 510px;
+    margin-left: -440px;
+    
+}
+
+/* DISEÑO Clasificacion */
+.clasificacion{
+    float: right;
+    margin-right: 40px;
+    margin-top: -30px;
+    
+}
+
+.texto_clasificacion{
+    text-align: center;
+    color:black;
+    background: white;
+    border-radius: 30px;
+    border: #F74946 solid;
+    opacity: 80%;
+    
+}
+
+.clasificacion_img{
+    margin-top: 20px;
+    height: 600px;
+}
