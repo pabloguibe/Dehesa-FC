@@ -1,0 +1,244 @@
+/* DISEÑO DEL NAV */
+
+nav {
+    background: #F74946;
+    height: 80px;
+    width: 100%;
+}
+
+.enlace {
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.escudo {
+    height: 120px;
+    margin-top: -20px;
+    width: 70px;
+    height: 70px;
+    margin-left: 130px;
+}
+
+
+
+.titulo_escudo {
+    margin-top: -50px;
+    margin-left: 220px;
+    color: #fff;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active,
+li a:hover {
+    background: black;
+    transition: 1s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+section {
+    background: url() no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 952px) {
+    .enlace {
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #F58583;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    li a.hover, li a.active{
+        background: none;
+        color:#F74946;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+
+    } 
+    
+
+}
+
+
+
+/*Diseño de las tareas*/
+:root {
+    --primary: #A5C882;
+    --secondary: #D33F49;
+    --light: #fff;
+    --dark: #000;
+    --diabled: #e7e7e7;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: var(--diabled);
+    background-image: url(../images/productos-limpieza.jpg);
+    background-size: cover;
+}
+
+*:first-letter {
+    text-transform: capitalize;
+}
+
+.lista {
+    border-radius: 5px;
+}
+
+.lista {
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--light);
+    width: 100%;
+    max-width: 350px;
+}
+
+.dia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.diaRight {
+    display: flex;
+    align-items: center;
+}
+
+#diaNumber {
+    font-size: 50px;
+}
+
+#diaText {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#diaMonth,
+#diaNumber,
+#diaText  {
+    font-weight: bold;
+}
+
+#diaMonth,
+#diaYear {
+    margin-left: 7px;
+    font-size: 20px;
+}
+
+form {
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 15px;
+}
+
+input {
+    border: none;
+    padding-left: 10px;
+    background-color: var(--diabled);
+}
+
+input:focus {
+    outline: none;
+}
+
+.addTaskButton,
+.orderButton {
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addTaskButton {
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: var(--diabled);
+}
+
+.orderButton {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.task {
+    background-color: var(--primary);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.done {
+    background-color: var(--diabled);
+    text-decoration: line-through;
+    color: var(--dark);
+}

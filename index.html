@@ -19,8 +19,7 @@
             <h1 class="login__titulo">DEHESA FC</h1>
             <h2 class="login__titulo">Login</h2>
 
-            <input id="nombre_usuario" class="login__input" type="text" name="nombre_usuario" maxlength="20"
-                required>
+            <input id="nombre_usuario" class="login__input" type="text" name="nombre_usuario" maxlength="20" required>
             <label for="" class="login__label">Nombre Usuario</label>
 
             <input id="contraseña" class="login__input" type="password" name="contraseña" maxlength="20" required>
@@ -29,7 +28,8 @@
             <p>
                 <a href="html/registro.html">No tienes cuenta?</a>
             </p>
-            <input class="login__submit" type="submit" onclick="abrirNuevaVentana()" value="Enviar">
+            <input class="login__submit" type="submit" onclick=" validar()" value="Enviar">
+
             <br>
             <input class="login__vaciar" type="reset" value="Borrar">
             </p>
@@ -131,6 +131,7 @@
     </footer>
 
     <script src="js/javascript.js"></script>
+    
 </body>
 
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/escudo2.png" type="image/jpg" />
+    <link rel="stylesheet" href="../css/tareas.css">
+    <title>Lista de Tareas</title>
+</head>
+
+<body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+
+        </label>
+        <a href="" class="enlace">
+            <img src="../images/escudo2.png" alt="escudo" class="escudo">
+            <h2 class="titulo_escudo">DEHESA FC</h2>
+        </a>
+        <ul>
+            <li><a href="trabajador.html">Inicio</a></li>
+            <li><a class="active" href="tareas.html">Tareas</a></li>
+        </ul>
+    </nav>
+
+    <div class="lista">
+        <div class="dia">
+            <div class="diaRight">
+                <div id="diaNumber"></div>
+                <div>
+                    <div id="diaMonth"></div>
+                    <div id="diaYear"></div>
+                </div>
+            </div>
+            <div id="diaText"></div>
+        </div>
+        <form onsubmit="AñadirNuevaTarea(event)" >
+            <input type="text" name="taskText" autocomplete="off" placeholder="Nueva tarea" class="roundBorder">
+            <button type="submit" class="addTaskButton">+</button>
+            <button type="button" class="orderButton roundBorder" onclick="renderOrderedTasks()">Ordenar</button>
+        </form>
+        <div id="tasksContainer"></div>
+    </div>
+
+    <script src="../js/tareas.js"></script>
+</body>
+</html>

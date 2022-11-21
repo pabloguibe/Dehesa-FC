@@ -122,10 +122,8 @@ function validar() {
             valido = false;
         }
 
-        if (valido===true){
-            window.open('index.html');
-        }
-        
+    
+       
 
     } catch (err) {
         console.log(err)
@@ -136,6 +134,10 @@ function validar() {
     }
 
     
+}
+
+function tieneCuenta(){
+    document.getElementById('login_contenido').style.display = 'block';
 }
 
 
