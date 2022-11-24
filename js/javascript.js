@@ -13,22 +13,6 @@ for (var i = 0; i < inputs.length; i++) {
     });
 }
 
-//CLASE CLIENTE:
-class Cliente {
-    constructor(nombre, apellidos, correo, telefono, dni, iban, swift, nombre_usuario, contraseña, fecha_nacimiento) {
-        this._nombre = nombre;
-        this._apellidos = apellidos;
-        this._correo = correo;
-        this._telefono = telefono;
-        this._dni = dni;
-        this._iban = iban;
-        this._swift = swift;
-        this._nombre_usuario = nombre_usuario;
-        this._contraseña = contraseña;
-        this._fecha_nacimiento = fecha_nacimiento;
-    }
-
-}
 
 function validar() {
     let valido = true;
@@ -51,6 +35,7 @@ function validar() {
         expresion_telefono = /^\d{9}$/;
         expresion_fecha = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
         var mayor_edad = new Date(new Date().getTime() - 18 * 365 * 24 * 60 * 60 * 1000);
+
 
 
 
@@ -122,22 +107,37 @@ function validar() {
             valido = false;
         }
 
-    
-       
+        if (valido === true) {
+            nombre_usuario = document.getElementById("nombre_usuario").value
+            console.log(nombre_usuario)
+            contraseña = document.getElementById("contraseña").value
+            console.log(contraseña)
+            location.href="../index.html"
+        }
+
 
     } catch (err) {
         console.log(err)
         valido = false;
     } finally {
         return valido;
-       
+
+
+    }
+
+
+}
+
+function ComprobarLogin(){
+    if(document.getElementById("nombre_usuario").value===nombre_usuario && document.getElementById("contraseña").value===contraseña){
+    
+    location.href="https://www.marca.com/";
+    }else {
+        alert("Hola");
+        
     }
 
     
-}
-
-function tieneCuenta(){
-    document.getElementById('login_contenido').style.display = 'block';
 }
 
 

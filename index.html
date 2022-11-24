@@ -13,7 +13,7 @@
 
         <img class="escudo" src="images/escudo.png" alt="escudo">
 
-        <form id="form1" class="login" action="#" name="login" method="post" onsubmit="return validar();">
+        <form id="form1" class="login" name="login" method="post">
 
 
             <h1 class="login__titulo">DEHESA FC</h1>
@@ -28,7 +28,7 @@
             <p>
                 <a href="html/registro.html">No tienes cuenta?</a>
             </p>
-            <input class="login__submit" type="submit" onclick=" validar()" value="Enviar">
+            <input class="login__submit" type="submit" onclick="ComprobarLogin()" value="Enviar">
 
             <br>
             <input class="login__vaciar" type="reset" value="Borrar">
