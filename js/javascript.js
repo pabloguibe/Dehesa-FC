@@ -112,8 +112,9 @@ function validar() {
             console.log(nombre_usuario)
             contraseña = document.getElementById("contraseña").value
             console.log(contraseña)
-            location.href="../index.html"
+            window.location = "../index.html";
         }
+
 
 
     } catch (err) {
@@ -128,17 +129,21 @@ function validar() {
 
 }
 
-function ComprobarLogin(){
-    if(document.getElementById("nombre_usuario").value===nombre_usuario && document.getElementById("contraseña").value===contraseña){
-    
-    location.href="https://www.marca.com/";
-    }else {
-        alert("Hola");
-        
+function ComprobarLogin() {
+    console.log("hola");
+    if (document.getElementById("cliente").checked) {
+
+        window.location = "html/cliente.html";
+
     }
 
-    
+    if (document.getElementById("trabajador").checked) {
+        window.location = "html/trabajador.html";
+    }
+
+
 }
+
 
 
 
