@@ -35,7 +35,7 @@ function validar() {
         expresion_telefono = /^\d{9}$/;
         expresion_fecha = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
         var mayor_edad = new Date(new Date().getTime() - 18 * 365 * 24 * 60 * 60 * 1000);
-        
+
 
 
 
@@ -108,19 +108,22 @@ function validar() {
             valido = false;
         }
 
-        if(document.getElementById("cliente").checked){
+        if (document.getElementById("cliente").checked) {
             localStorage.setItem('cliente', true);
         }
 
-        if(document.getElementById("trabajador").checked){
+        if (document.getElementById("trabajador").checked) {
             localStorage.setItem('trabajador', true);
 
         }
-        
+
         if (valido === true) {
+            localStorage.setItem('usuario', nombre_usuario);
+            localStorage.setItem('contraseña', contraseña);
             window.close();
-            window.open ("../index.html");
-            
+            window.open("../index.html");
+
+
         }
 
 
@@ -137,22 +140,52 @@ function validar() {
 
 }
 
-function ComprobarLogin() {
+function validar_login() {
+    let valido_login = true;
 
-    if (localStorage.getItem("cliente")==true) {
-        console.log("cliente");
-        window.close();
-        window.open ("html/cliente.html");
+    try {
+        usuario_valido = localStorage.getItem('usuario');
+        contraseña_valida = localStorage.getItem('contraseña');
 
-    }else if (localStorage.getItem("trabajador")==true) {
-        console.log("trabajador");
-        window.close();
-        window.open ("html/trabajador.html");  
-       
+        nombre_usuario_login = document.getElementById("nombre_usuario").value;
+        contraseña_login = document.getElementById("contraseña").value;
+
+        if (nombre_usuario === "" || contraseña === "") {
+            alert("Todos los campos son obligatorios.");
+            valido = false;
+        }
+
+        else if (nombre_usuario_login != usuario_valido) {
+            alert("usuario incorrecto");
+            valido_login = false;
+        }
+
+        else if (contraseña_login != contraseña_valida) {
+            alert("contraseña incorrecta");
+            valido_login = false;
+        }
+
+        if (valido_login === true) {
+            window.close();
+            window.open("html/cliente.html");
+
+
+        }else{
+            alert("DATOS INCORRECTOS");
+            window.close();
+            window.open("index.html");
+
+        }
+
+    } catch (err) {
+        console.log(err)
+        valido_login = false;
+    } finally {
+        return valido_login;
+
     }
-
-
 }
+
 
 
 
