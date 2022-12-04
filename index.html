@@ -13,7 +13,7 @@
 
         <img class="escudo" src="images/escudo.png" alt="escudo">
 
-        <form id="form1" class="login" name="login" method="post">
+        <form id="form1" class="login" name="login" method="post" >
 
 
             <h1 class="login__titulo">DEHESA FC</h1>
@@ -25,18 +25,11 @@
             <input id="contraseña" class="login__input" type="password" name="contraseña" maxlength="20" required>
             <label for="" class="login__label">Contraseña</label>
 
-            <p>
-                <input type="checkbox" name="terminos" id="cliente"> <b>Cliente</b>
-            </p>
-
-            <p>
-                <input type="checkbox" name="terminos" id="trabajador"> <b>Trabajador</b>
-            </p>
 
             <p>
                 <a href="html/registro.html">No tienes cuenta?</a>
             </p>
-            <input class="login__submit" type="submit" onclick="ComprobarLogin()" value="Enviar">
+            <button class="login__submit" onclick="ComprobarLogin()" value="Enviar">ENVIAR</button>
 
             <br>
             <input class="login__vaciar" type="reset" value="Borrar">

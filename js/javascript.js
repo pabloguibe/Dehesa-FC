@@ -35,6 +35,7 @@ function validar() {
         expresion_telefono = /^\d{9}$/;
         expresion_fecha = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
         var mayor_edad = new Date(new Date().getTime() - 18 * 365 * 24 * 60 * 60 * 1000);
+        
 
 
 
@@ -107,12 +108,19 @@ function validar() {
             valido = false;
         }
 
+        if(document.getElementById("cliente").checked){
+            localStorage.setItem('cliente', true);
+        }
+
+        if(document.getElementById("trabajador").checked){
+            localStorage.setItem('trabajador', true);
+
+        }
+        
         if (valido === true) {
-            nombre_usuario = document.getElementById("nombre_usuario").value
-            console.log(nombre_usuario)
-            contraseña = document.getElementById("contraseña").value
-            console.log(contraseña)
-            window.location = "../index.html";
+            window.close();
+            window.open ("../index.html");
+            
         }
 
 
@@ -130,15 +138,17 @@ function validar() {
 }
 
 function ComprobarLogin() {
-    console.log("hola");
-    if (document.getElementById("cliente").checked) {
 
-        window.location = "html/cliente.html";
+    if (localStorage.getItem("cliente")==true) {
+        console.log("cliente");
+        window.close();
+        window.open ("html/cliente.html");
 
-    }
-
-    if (document.getElementById("trabajador").checked) {
-        window.location = "html/trabajador.html";
+    }else if (localStorage.getItem("trabajador")==true) {
+        console.log("trabajador");
+        window.close();
+        window.open ("html/trabajador.html");  
+       
     }
 
 
