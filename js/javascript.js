@@ -40,12 +40,6 @@ function validar() {
 
 
 
-
-
-
-
-
-
         if (nombre === "" || apellidos === "" || correo === "" || telefono === "" || dni === "" || iban === "" || swift === "" || nombre_usuario === "" || fecha_nacimiento === "") {
             alert("Todos los campos son obligatorios.");
             valido = false;
@@ -109,17 +103,20 @@ function validar() {
         }
 
         if (document.getElementById("cliente").checked) {
-            localStorage.setItem('cliente', true);
+            cliente="cliente";
         }
 
         if (document.getElementById("trabajador").checked) {
-            localStorage.setItem('trabajador', true);
+            trabajador="trabajador";
 
         }
 
         if (valido === true) {
             localStorage.setItem('usuario', nombre_usuario);
             localStorage.setItem('contraseña', contraseña);
+            localStorage.setItem('trabajador', trabajador);
+            localStorage.setItem('cliente', cliente);
+            
             window.close();
             window.open("../index.html");
 
@@ -140,13 +137,15 @@ function validar() {
 
 }
 
+//LOGIN
 function validar_login() {
     let valido_login = true;
 
     try {
         usuario_valido = localStorage.getItem('usuario');
         contraseña_valida = localStorage.getItem('contraseña');
-
+        cliente_login=localStorage.getItem('cliente');
+        trabajador_login=localStorage.getItem('trabajador');
         nombre_usuario_login = document.getElementById("nombre_usuario").value;
         contraseña_login = document.getElementById("contraseña").value;
 
@@ -164,18 +163,21 @@ function validar_login() {
             alert("contraseña incorrecta");
             valido_login = false;
         }
+    
+        if(valido_login===true){
 
-        if (valido_login === true) {
+        
+        if(cliente_login==="cliente"){
             window.close();
             window.open("html/cliente.html");
-
-
-        }else{
-            alert("DATOS INCORRECTOS");
-            window.close();
-            window.open("index.html");
-
         }
+
+        else if(trabajador_login==="trabajador"){
+            window.close();
+            window.open("html/trabajador.html");
+        }
+
+    }
 
     } catch (err) {
         console.log(err)
@@ -184,6 +186,7 @@ function validar_login() {
         return valido_login;
 
     }
+
 }
 
 
